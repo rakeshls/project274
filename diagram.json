@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Niyati Singh",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -32.22, "left": 15.94, "attrs": {} },
+    { "type": "wokwi-microsd-card", "id": "sd1", "top": 21.78, "left": -110.19, "attrs": {} },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": 293.03,
+      "left": 60.15,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 177.71, "left": 330.49, "attrs": {} }
+  ],
+  "connections": [
+    [ "sd1:SCK", "uno:13", "green", [ "h45.56", "v-97.7", "h125.69" ] ],
+    [ "sd1:DO", "uno:12", "green", [ "h39.22", "v-86.83", "h138.36" ] ],
+    [ "sd1:DI", "uno:11", "green", [ "h31.83", "v-134.93", "h157.37" ] ],
+    [ "sd1:CS", "uno:10", "green", [ "h23.38", "v-151.77", "h176.38" ] ],
+    [ "sd1:GND", "uno:GND.1", "black", [ "h15.99", "v-120.72", "h136.25" ] ],
+    [ "sd1:VCC", "uno:5V", "red", [ "h20.91", "v114.73", "h191.33" ] ],
+    [ "lcd1:SCL", "uno:A5", "orange", [ "h-15.85", "v-75.98", "h265.66" ] ],
+    [ "lcd1:SDA", "uno:A4", "#8f4814", [ "h-26.11", "v-77.76", "h265.66" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-37.39", "v-78.52", "h186.68" ] ],
+    [ "lcd1:GND", "uno:GND.3", "black", [ "h-48.68", "v-78.25", "h221.55" ] ],
+    [ "rtc1:GND", "uno:GND.2", "black", [ "h-122.14", "v-12.56" ] ],
+    [ "rtc1:5V", "uno:5V", "red", [ "h0" ] ],
+    [ "rtc1:SDA", "uno:A4", "green", [ "h0" ] ],
+    [ "rtc1:SCL", "uno:A5", "blue", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
